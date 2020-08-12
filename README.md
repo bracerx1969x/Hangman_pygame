@@ -1,3 +1,5 @@
+TODO: figure out how to format this better using markdown...
+
 ## Welcome to my Hangman game project!
 
 This project was initiated by my working through a three-part tutorial on Youtube that teaches how to use pygame.
@@ -7,7 +9,6 @@ These videos below are written by TechWithTim:
 
 ##### Pycharm Youtube Tutorials
 ```markdown
-
 
 1. Python Hangman Tutorial #1 - Learn to Make Games with Pygame (https://www.youtube.com/watch?v=d038LZp_Jhk)
 2. Python Hangman Tutorial #2 - Pygame Mouse Events & Collision (https://www.youtube.com/watch?v=W6cjx7t39d4)
