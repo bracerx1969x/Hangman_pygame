@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Welcome to my Hangman game project!
 
-You can use the [editor on GitHub](https://github.com/bracerx1969x/Hangman_pygame/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This project was initiated by my working through a three-part tutorial on Youtube that teaches how to use pygame.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Overview:
+These videos below are written by TechWithTim:
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+##### Pycharm Youtube Tutorials
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+1. Python Hangman Tutorial #1 - Learn to Make Games with Pygame (https://www.youtube.com/watch?v=d038LZp_Jhk)
+2. Python Hangman Tutorial #2 - Pygame Mouse Events & Collision (https://www.youtube.com/watch?v=W6cjx7t39d4)
+3. Python Hangman Tutorial #3 - Main Menu, Rendering Text & Finishing Touches (https://www.youtube.com/watch?v=d038LZp_Jhk)
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
+I've also completed another Hangman tutorial on the JetBrains Academy's hyperskill tutorial site. For this version, which I worked through before the Pygame tutorial version, is written using Object Oriented Programming styles as much as I could. I did this to practice my coding techniques and to make it easier to add to later.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bracerx1969x/Hangman_pygame/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Objectives:
+My intention for this overall project is to merge the OOP styles, further refining it as necessary and incorporate the graphical elements using Pygame learned during those tutorials. 
