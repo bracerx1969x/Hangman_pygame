@@ -1,6 +1,10 @@
+# Pygame Youtube tutorial for Hangman game
+# only minor changes from exactly following tutorial
+
 import math
 import pygame
 import pygame.ftfont
+from random import choice
 
 
 # setup display
@@ -25,8 +29,10 @@ for i in range(26):
     letters.append([x, y, chr(A + i), VISIBLE])
 
 # fonts
-LETTER_FONT = pygame.ftfont.SysFont('comicsans', 40)
-WORD_FONT = pygame.ftfont.SysFont('comicsans', 60)
+BASE_FONT_NAME = 'verdana'
+LETTER_FONT = pygame.ftfont.SysFont(BASE_FONT_NAME, 28)
+WORD_FONT = pygame.ftfont.SysFont(BASE_FONT_NAME, 40)
+TITLE_FONT = pygame.ftfont.SysFont(BASE_FONT_NAME, 60)
 
 # load images
 images = []
@@ -36,7 +42,8 @@ for i in range(7):
 
 # game variables
 hangman_status = 0
-word = 'DEVELOPER'
+WORD_CHOICES = ['PYTHON', 'JAVA', 'KOTLIN', 'JAVASCRIPT', 'DEVELOPER']
+word = choice(WORD_CHOICES)
 guessed = []
 
 # colors
@@ -51,6 +58,10 @@ run = True
 
 def draw():
     win.fill(WHITE)
+
+    # draw title
+    text = TITLE_FONT.render('PYGAME HANGMAN', 1, BLACK)
+    win.blit(text, (int(WIDTH / 2 - text.get_width() / 2), 10))
 
     # draw word
     display_word = ''
@@ -68,16 +79,24 @@ def draw():
         if visible:
             pygame.draw.circle(win, BLACK, (x, y), RADIUS, 3)
             text = LETTER_FONT.render(ltr, 1, BLACK)
-            win.blit(text, (int(x - text.get_width() / 2 + 1), int(y - text.get_height() / 2) + 3))
+            win.blit(text, (int(x - text.get_width() / 2), int(y - text.get_height() / 2)))
 
     win.blit(images[hangman_status], (150, 100))
     pygame.display.update()
+    pygame.time.delay(250)
+
+
+def display_message(message):
+    pygame.time.delay(1000)
+    win.fill(WHITE)
+    text = WORD_FONT.render(message, 1, BLACK)
+    win.blit(text, (WIDTH / 2 - text.get_width() / 2, HEIGHT / 2 - text.get_height() / 2))
+    pygame.display.update()
+    pygame.time.delay(3000)
 
 
 while run:
     clock.tick(FPS)
-
-    draw()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -94,6 +113,8 @@ while run:
                         if ltr not in word:
                             hangman_status += 1
 
+    draw()
+
     won = True
     for letter in word:
         if letter not in guessed:
@@ -101,11 +122,11 @@ while run:
             break
 
     if won:
-        print('won')
+        display_message('You Won!')
         break
 
     if hangman_status == 6:
-        print('lost')
+        display_message('You Lost!')
         break
 
 pygame.quit()
